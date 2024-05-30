@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <!-- 공통 로그인 바 -->
+  <nav class="navbar is-sticky">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="index.html">
+          <span class="navbar-title">My Awesome Site</span>
+        </a>
+      </div>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <span id="user-info">Not logged in</span>
+          <a class="button is-light" id="login-button">Login</a>
+          <a class="button is-light" id="logout-button" style="display:none;">Logout</a>
+          <a class="button is-light" id="profile-button" style="display:none;">Profile</a>
+          <span id="user-icon" style="display:none;">
+            <!-- 회원 등급 아이콘 자리 -->
+            <i class="fas fa-user"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section">
+    <div class="container">
+      <h1 class="title">Profile</h1>
+      <div class="box">
+        <div class="field">
+          <label class="label">Profile Picture</label>
+          <div class="file has-name is-boxed">
+            <label class="file-label">
+              <input class="file-input" type="file" id="profile-picture">
+              <span class="file-cta">
+                <span class="file-icon">
+                  <i class="fas fa-upload"></i>
+                </span>
+                <span class="file-label">Choose a file…</span>
+              </span>
+              <span class="file-name" id="profile-picture-filename">No file uploaded</span>
+            </label>
+          </div>
+          <figure class="image is-128x128">
+            <img id="profile-picture-preview" src="https://via.placeholder.com/128" alt="Profile Picture">
+          </figure>
+        </div>
+        <div class="field">
+          <label class="label">Name</label>
+          <div class="control">
+            <input class="input" type="text" id="name" value="John Doe">
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Email</label>
+          <div class="control">
+            <input class="input" type="email" id="email" value="john@example.com">
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Bio</label>
+          <div class="control">
+            <textarea class="textarea" id="bio">This is my bio...</textarea>
+          </div>
+        </div>
+        <div class="field is-grouped">
+          <div class="control">
+            <button class="button is-link" id="save-button">Save</button>
+          </div>
+          <div class="control">
+            <button class="button is-light" id="home-button">Go to Home</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+	<footer class="footer">
+		<div class="content has-text-centered">
+			<p>Osunji LC | PURPLIC</p>
+		</div>
+	</footer>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="js/profile.js"></script> <!-- js/profile.js 연결 -->
+  <script src="js
